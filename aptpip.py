@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import argparse
 import csv
 import json
@@ -19,7 +20,11 @@ def setup_logging(debug_mode):
 
 def run_command(command, log_message, check_error=True):
     """Runs a command and logs the output, optionally checking for errors."""
-    logging.debug(log_message)
+    if check_error:
+        print(f"Executing: {' '.join(command)}")
+        logging.info(log_message)
+    else:
+        logging.debug(log_message)
     if args.debug:
         print(log_message)
         print(f"Executing: {' '.join(command)}")
