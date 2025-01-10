@@ -5,6 +5,21 @@ It tries its best to find recursively what can be apt installed before doing any
 # how to run
 ```python3 aptpip.py <desired_python_module> [--debug]```
 
+./aptpip.py -h
+usage: aptpip.py [-h] [-r REQUIREMENTS_FILE] [--debug] [--dev] [package_name]
+
+Installs dependencies for a package or from a requirements file.
+
+positional arguments:
+  package_name          The package to install dependencies for.
+
+options:
+  -h, --help            show this help message and exit
+  -r REQUIREMENTS_FILE, --requirements REQUIREMENTS_FILE
+                        Path to a requirements.txt file.
+  --debug               Enable debug logging.
+  --dev                 Include development dependencies.
+
 E.g.
 ```
 ./aptpip.py gphotos-sync --debug
