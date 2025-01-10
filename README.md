@@ -3,11 +3,11 @@ When possible, apt install python3-package , and pip3 install only when not poss
 It tries its best to find recursively what can be apt installed before doing any pip install.
 
 # how to run
-```python3 aptpip.py <desired_python_module> --debug```
+```python3 aptpip.py <desired_python_module> [--debug]```
 
 E.g.
 ```
-python3 aptpip.py gphotos-sync --debug
+./aptpip.py gphotos-sync --debug
 Starting installation process for gphotos-sync
 Checking gphotos-sync (gphotos-sync)
 Checking if apt package python3-gphotos-sync exists...
